@@ -27,7 +27,7 @@ html(lang="jp")
             else
               span #{post.id} : ID:#{post.trackingCookie}      
         div.card-body
-          p.card-text!=post.content
+          p(style="white-space:pre;").card-text #{post.content}
         div.card-footer
             div 投稿日時: #{post.createdAt}
             - var isAdmin = (user === 'admin')
